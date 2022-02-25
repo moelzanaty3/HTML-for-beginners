@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+</head>
+<body>
+  <table>
+    <!-- caption is the first child of table -->
+    <caption>
+      Table Title
+    </caption>
+    <!-- thead is after caption -->
+    <thead>
+      <!-- Each table row starts with a <tr> and it's stands for table row. -->
+      <tr>
+        <!-- Sometimes you want your cells to be headers, in those cases use the <th> tag instead of the <td> tag -->
+        <th>Name</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <!-- tbody is after thead -->
+    <tbody>
+      <tr>
+        <!-- Each table cell is defined by a <td> and it's stands for table data. -->
+        <!-- Everything between <td> and </td> are the content of the table cell. -->
+        <td>Mohammed Elzanaty</td>
+        <td>Egypt</td>
+      </tr>
+    </tbody>
+    <!-- tfoot can be placed before or after tbody, but not in a group of tbody. -->
+    <!-- Regardless where tfoot is in markup, it's rendered at the bottom. -->
+    <tfoot>
+      <tr>
+        <td>Footer content 1</td>
+        <td>Footer content 2</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
