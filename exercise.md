@@ -73,4 +73,13 @@ If you manage to get as far as creating both web pages, link them together with 
 As always, do not be concerned with how these pages look. They are Ugly Web Pages&trade;! Be sure to use the right HTML tags to communicate what the content is about, not what you think is pretty.
 
 
+### Form Exercises
+
+Work through the following sections of exercises at W3Schools (scroll to bottom of list): https://www.w3schools.com/html/exercise.asp
+
+- HTML Forms, all exercises
+- HTML Form Elements, exercises 1-2
+- HTML Input Types, all exercises
+
+
 > © [frontendMasters](https://github.com/FrontendMasters/bootcamp) bootcamp
