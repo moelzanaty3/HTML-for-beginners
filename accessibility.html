@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility</title>
+  <style rel="stylesheet">
+    .tabs {
+      font-size: 12px;
+      background: #f5f5f5;
+      border-radius: 20px;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 50px 0 20px;
+      padding-left: 0;
+      line-height: 1.1;
+    }
+
+    .tab {
+      padding: 9px 35px;
+      line-height: 20px;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: middle;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .tab.active {
+      background: #652796;
+      border-color: #652796;
+      color: #ffffff;
+    }
+
+    .tabs-content {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 25px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 50px;
+      background: #652796;
+      color: white;
+      border: 1px solid #ccc;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <ol class="tabs" role="tablist">
+    <li class="tab active" role="tab" aria-controls="panel1" aria-selected="true" id="tab1">Tab 1</li>
+    <li class="tab" role="tab" aria-controls="panel2" aria-selected="false" id="tab2">Tab 2</li>
+    <li class="tab" role="tab" aria-controls="panel3" aria-selected="false" id="tab3">Tab 3</li>
+  </ol>
+
+  <div class="tabs-content">
+    <div class="tab-content active" role="tabpanel" id="panel1" aria-labelledby="tab1">
+      <p>Panel 1</p>
+    </div>
+
+    <div class="tab-content" role="tabpanel" id="panel2" aria-labelledby="tab2">
+      <p>Panel 2</p>
+    </div>
+
+    <div class="tab-content" role="tabpanel" id="panel3" aria-labelledby="tab3">
+      <p>Panel 3</p>
+    </div>
+  </div>
+
+  <script>
+    let tabs = document.querySelectorAll('.tab');
+    let content = document.querySelectorAll('.tab-content');
+
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].addEventListener('click', () => tabClick(i));
+    }
+
+    function tabClick(currentTab) {
+      removeActive();
+      tabs[currentTab].classList.add('active');
+      content[currentTab].classList.add('active');
+    }
+
+    function removeActive() {
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+        content[i].classList.remove('active');
+      }
+    }
+  </script>
+</body>
+
+</html>
